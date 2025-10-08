@@ -29,13 +29,13 @@ export default function Home() {
       <h1>🚀 MODNFTs Marketplace</h1>
       {!wallet ? (
         <button onClick={connectWallet} style={{ padding: '15px', background: 'blue', color: 'white', fontSize: '1.2rem', borderRadius: '8px' }}>
-          🔌 CONNECT WALLET (EARN $1)
+          🔌 CONNECT WALLET (PAY $5)
         </button>
       ) : (
         <>
           <p>Connected: {wallet.slice(0,6)}...{wallet.slice(-4)}</p>
           <button onClick={mintNFT} style={{ padding: '15px', background: 'green', color: 'white', marginTop: '20px', fontSize: '1.2rem', borderRadius: '8px' }}>
-            🖼️ MINT NFT (YOU GET $35)
+            🖼️ MINT NFT (YOU GET $5)
           </button>
         </>
       )}
