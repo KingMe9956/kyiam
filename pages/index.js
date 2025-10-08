@@ -19,14 +19,14 @@ export default function Home() {
       params: [{
         from: wallet,
         to: '0x6aF3fB556c57f4d973a3AA7B80Bb5E643e03690e, // YOUR REAL ETH ADDRESS
-        value: '0x' + (0.01 * 1e18).toString(16) // $35 equivalent
+        value: '0x' + (0.01 * 1e18).toString(16) // $5 equivalent
       }]
     });
   };
 
   return (
     <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h1>🚀 MODNFTs Marketplace</h1>
+      <h1>🚀 NFT Marketplace</h1>
       {!wallet ? (
         <button onClick={connectWallet} style={{ padding: '15px', background: 'blue', color: 'white', fontSize: '1.2rem', borderRadius: '8px' }}>
           🔌 CONNECT WALLET (PAY $5)
