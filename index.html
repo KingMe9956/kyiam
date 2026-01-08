@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYIAM - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0,0,0,0.3);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #059669;
+        }
+
+        .newsletter {
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+            animation-delay: 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .newsletter h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .newsletter p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 25px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 12px 30px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #059669;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{ automate everything. }</h1>
+            <p class="tagline">Based in [Your City], KYIAM creates and invests in AI and SaaS solutions.</p>
+            <span class="badge">🚀 active investment</span>
+        </header>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🤖</div>
+                <h3>AI Marketplace</h3>
+                <p>Pre-built AI services and solutions for businesses looking to integrate artificial intelligence.</p>
+                <a href="#" class="project-link">VIEW INVESTMENT</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💬</div>
+                <h3>Video Chat Platform</h3>
+                <p>Chat with videos for anything. Revolutionary communication platform powered by AI.</p>
+                <a href="#" class="project-link">VIEW INVESTMENT</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💼</div>
+                <h3>Business AI Suite</h3>
+                <p>AI for Business automation and optimization. Streamline your operations efficiently.</p>
+                <a href="#" class="project-link">VIEW INVESTMENT</a>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <h2>📧 KYIAM Newsletter</h2>
+            <p>We will leverage AI and software to automate systems efficiently</p>
+            <form class="newsletter-form" onsubmit="handleSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input').value;
+            alert('Thanks for subscribing! Email: ' + email + '\n\nNote: Connect this to a free service like Formspree, EmailJS, or Netlify Forms to actually receive submissions.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
