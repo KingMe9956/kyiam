@@ -1,2 +1,3 @@
-// IP Anchor: KingMe9956 
+// Copyright KY402 AI-to-AI © 2026
+// EXPLICITLY ALL RIGHTS RESERVED 
 
